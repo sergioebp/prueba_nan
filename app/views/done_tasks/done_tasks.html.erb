@@ -1,11 +1,10 @@
 <%= link_to 'volver', root_path %>
 <h1>Tareas realizadas</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Image</th>
     </tr>
   </thead>
 
@@ -13,7 +12,6 @@
     <% (@tasks.where(user_id: current_user, complete: true)).each do |task| %>
       <tr>
         <td><%= task.task.name %></td>
-        <td><img src=<%= task.task.image %> alt="" /></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,15 +1,12 @@
 <p>
-  <strong>Name:</strong>
-  <%= @task.name %>
+  <strong><%= @task.name %></strong>
+  
 </p>
 
 <p>
-  <strong>Image:</strong>
   <img src=<%= @task.image %> alt="" />
 </p>
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Volver', tasks_path %>
 
 <h1>Usuarios que han completado esta tarea</h1>
 

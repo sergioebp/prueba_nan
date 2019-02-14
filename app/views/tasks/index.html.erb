@@ -1,6 +1,6 @@
 <h1>Tasks</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Name</th>
@@ -21,7 +21,7 @@
         <% else %>
           <td><%= link_to 'completar', task_done_tasks_path(task), method: :post %></td>
         <% end %>
-        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Mostrar', task %></td>
         <% if false %>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
