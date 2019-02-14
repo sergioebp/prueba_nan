@@ -1,0 +1,20 @@
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <img src=<%= @task.image %> alt="" />
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
+
+<h1>Usuarios que han completado esta tarea</h1>
+
+<ul>
+  <% (@tasks.where(task_id: @task, complete: true)).each do |i| %>
+  <li> <%= i.user.email %>
+  <% end %>
+</ul>
